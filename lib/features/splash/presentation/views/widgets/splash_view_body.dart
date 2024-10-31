@@ -34,7 +34,7 @@ late Animation<Offset> slidingAnimation;
   void dispose() {
     super.dispose();
 
-    animationController.dispose();
+    //animationController.dispose();
   }
   @override
   Widget build(BuildContext context) {
@@ -51,11 +51,17 @@ late Animation<Offset> slidingAnimation;
     );
   }
 
-  AnimationController initSlidingAnimation() {
-    return animationController = AnimationController(
+  void initSlidingAnimation() {
+    animationController = AnimationController(
     vsync: this,
     duration: const Duration(seconds: 2),
     );
+    slidingAnimation =
+        Tween<Offset>(begin: const Offset(0, 2), end: Offset.zero)
+            .animate(animationController);
+
+    animationController.forward();
+    
   }
 
   void navigateToHome() {
