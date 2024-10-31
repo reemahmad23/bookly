@@ -23,7 +23,9 @@ class HomeViewBody extends StatelessWidget {
           style: Styles.textStyle18,
           
           ),
-
+          const SizedBox(
+            height: 20,
+          ),
           BestSellerListViewItem(),
         ], 
       ),
@@ -46,6 +48,7 @@ class BestSellerListViewItem  extends StatelessWidget {
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(16 ),
               image: DecorationImage(
+              fit: BoxFit.fill,
                 image: AssetImage(
                   AssetsData.testImage,
                 ),
@@ -53,6 +56,21 @@ class BestSellerListViewItem  extends StatelessWidget {
           ),
         
       ),
+      const SizedBox(
+        width: 20,
+          ),
+      Column(
+        children: [
+          SizedBox(
+            width: MediaQuery.of(context).size.width * .5,
+            child: Text('Harry Potter and the Goblet of Fire',
+            maxLines: 2,
+            overflow: TextOverflow.ellipsis,
+            style: Styles.textStyle20,
+            ),
+          ),
+        ],
+      )
         ],
       ),
     );
