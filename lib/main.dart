@@ -2,7 +2,6 @@ import 'package:bookly_appl/constants.dart';
 import 'package:bookly_appl/features/splash/presentation/views/splash_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 void main() {
   runApp(const BooklyAppl());
