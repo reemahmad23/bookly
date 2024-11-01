@@ -1,4 +1,5 @@
 import 'package:bookly_appl/constants.dart';
+import 'package:bookly_appl/core/utlis/app_router.dart';
 import 'package:bookly_appl/core/utlis/assets.dart';
 import 'package:bookly_appl/features/home/presentation/views/home_view.dart';
 import 'package:bookly_appl/features/splash/presentation/views/widgets/sliding_widget.dart';
@@ -6,6 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/src/routes/transitions_type.dart';
+import 'package:go_router/go_router.dart';
 
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({super.key});
@@ -66,8 +68,7 @@ late Animation<Offset> slidingAnimation;
 
   void navigateToHome() {
     Future.delayed(const Duration(seconds: 2), () {
-      Get.to(() => const HomeView() , 
-      transition: Transition.fade , duration: kTransitionDuration); 
+      GoRouter.of(context).push(AppRouter.kHomeView); 
     });
   }
 }
