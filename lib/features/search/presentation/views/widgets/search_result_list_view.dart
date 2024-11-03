@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class SearchResultListView extends StatelessWidget {
@@ -11,9 +10,9 @@ class SearchResultListView extends StatelessWidget {
       itemBuilder: (context, index) {
         return Padding(
           padding: const EdgeInsets.symmetric(vertical: 5),
-          child:  Text('data'), // BestSellerListViewItem(bookModel: BookModel(volumeInfo: volumeInfo)
-          );
-        
+          child: Text(
+              'data'), // BestSellerListViewItem(bookModel: BookModel(volumeInfo: volumeInfo)
+        );
       },
     );
   }

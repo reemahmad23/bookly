@@ -1,4 +1,3 @@
-
 import 'package:bookly_appl/features/home/presentation/views/book_details_view.dart';
 import 'package:bookly_appl/features/home/presentation/views/home_view.dart';
 import 'package:bookly_appl/features/search/presentation/views/search_view.dart';

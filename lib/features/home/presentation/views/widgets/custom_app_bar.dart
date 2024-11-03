@@ -1,4 +1,3 @@
-
 import 'package:bookly_appl/core/utlis/app_router.dart';
 import 'package:bookly_appl/core/utlis/assets.dart';
 import 'package:flutter/material.dart';
@@ -12,17 +11,20 @@ class CustomAppBar extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 20),
       child: Row(
-        children: [   
-          Image.asset(AssetsData.logo,
-          height: 30,
+        children: [
+          Image.asset(
+            AssetsData.logo,
+            height: 30,
           ),
           Spacer(),
-          IconButton(onPressed: (){
-            GoRouter.of(context).push(AppRouter.kSearchView);
-          }, 
-          icon: Icon(Icons.search,
-          size: 30,
-          ),
+          IconButton(
+            onPressed: () {
+              GoRouter.of(context).push(AppRouter.kSearchView);
+            },
+            icon: Icon(
+              Icons.search,
+              size: 30,
+            ),
           ),
         ],
       ),

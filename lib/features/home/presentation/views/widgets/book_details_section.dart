@@ -12,12 +12,12 @@ class BookDetailsSection extends StatelessWidget {
   Widget build(BuildContext context) {
     var width = MediaQuery.of(context).size.width;
     return Column(
-        children: [
-          Padding(
-            padding: EdgeInsets.symmetric(horizontal: width * .34),
-            child: CustomListViewItem(),
-          ),
-          SizedBox(
+      children: [
+        Padding(
+          padding: EdgeInsets.symmetric(horizontal: width * .34),
+          child: CustomListViewItem(),
+        ),
+        SizedBox(
           height: 10,
         ),
         Text(
@@ -47,7 +47,7 @@ class BookDetailsSection extends StatelessWidget {
           height: 10,
         ),
         BookAction(),
-        ],
+      ],
     );
   }
 }
