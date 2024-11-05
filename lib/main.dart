@@ -7,11 +7,14 @@ import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:go_router/go_router.dart';
 import 'package:hive/hive.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 
 void main() async {
   runApp(const BooklyAppl());
+  await Hive.initFlutter();
   Hive.registerAdapter(BookEntityAdapter());
-    await Hive.openBox(kFeaturedBox);
+    await Hive.openBox<BookEntity>(kFeaturedBox);
+    await Hive.openBox<BookEntity>(kNewestBox);
 }
 
 class BooklyAppl extends StatelessWidget {
