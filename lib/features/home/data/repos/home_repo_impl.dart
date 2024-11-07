@@ -10,11 +10,13 @@ class HomeRepoImpl  extends HomeRepo{
   final HomeRemoteDataSource homeRemoteDataSource;
   final HomeLocalDataSource homeLocalDataSource;
 
-  HomeRepoImpl({required this.homeRemoteDataSource, required this.homeLocalDataSource});
+  HomeRepoImpl(
+    {required this.homeRemoteDataSource, required this.homeLocalDataSource}
+    );
   @override
   Future<Either<Failure, List<BookEntity>>> fetchFeaturedBooks() async {
+    List<BookEntity> books;
     try { 
-      List<BookEntity> books;
       books = homeLocalDataSource.fetchFeaturedBooks();
       if (books.isNotEmpty) {
         return right(books);
@@ -33,8 +35,8 @@ class HomeRepoImpl  extends HomeRepo{
 
   @override
   Future<Either<Failure, List<BookEntity>>> fetchNewestBooks() async {
+    List<BookEntity> books;
     try {
-      List<BookEntity> books;
       books = homeLocalDataSource.fetchNewestBooks();
       if (books.isNotEmpty) {
         return right(books);
